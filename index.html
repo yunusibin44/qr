@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>Ramazan Aktaş</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
@@ -34,6 +34,7 @@ body {
     text-decoration: none; /* Bağlantı altı çizgilerini kaldırın */
     display: flex; /* İçeriği yatayda hizalayabilmek için flex kullanın */
     align-items: center; /* İçeriği dikeyde ortala */
+    color: white;
 }
 
 .contact-list a i {
@@ -58,32 +59,51 @@ body {
     color: #25d366; /* WhatsApp ikon rengi */
 }
 
-.ahref {
-   margin-left: 30%;
-   margin-top: 40px;
-}
-
-html {
-    background-color: #3b5998;
-}
-
 .contact{
-    background-color: #ffffff;
+    background-color: #d0eaf1;
+    height: 100vh;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.li-background {
+    background: rgb(73,235,227);
+background: linear-gradient(90deg, rgba(73,235,227,1) 36%, rgba(22,66,161,1) 73%);
+height: 60px !important;
+border-radius: 10px;
+}
+.contact-title {
+    color: #1642a1;
+    font-weight: 600;
+    font-family:cursive;
+}
+.contact-text {
+    color: black;
+    font-weight: 500;
+    line-height: 30px;
+    font-family: cursive;
 }
   </style>
   <body>
     <div class="container pb-4 contact">
-    <h1 class="text-center pt-4">İletişim Bilgileri</h1>
+    <h1 class="text-center pt-4 contact-title">İletişim Bilgileri</h1>
     
-    <p class="text-center mt-3">Benimle aşağıdaki sosyal medya hesaplarından iletişime geçebilirsiniz:
-      <br>  <h5> Ramazan Aktaş</h4>
+    <p class="text-center mt-3 contact-text">Benimle aşağıdaki sosyal medya hesaplarından iletişime geçebilirsiniz:
+      <br>  <h5 class="contact-text"> Ramazan Aktaşoğlu</h4>
     </p>
+    <div>
+        <img style="width: 130px; height: 130px; margin-bottom: 30px; border-radius: 10px;" src="images.jpg" alt="">
+    </div>
 
     <ul class="contact-list">
-        <li><a class="ahref" href="https://www.instagram.com/sizin_instagram_hesabınız" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-        <li><a class="ahref" href="https://www.facebook.com/sizin_facebook_hesabınız" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-        <li><a class="ahref" href="https://www.linkedin.com/in/sizin_linkedin_profiliniz" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-        <li><a class="ahref" href="https://api.whatsapp.com/send?phone=telefon_numaranız" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+        <li>
+            <div class="li-background d-flex justify-content-center align-items-center">
+            <a class="ahref" href="https://www.instagram.com/ramazanaktasoglu/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+        </li>
+        <li><div class="li-background d-flex justify-content-center align-items-center"><a class="ahref" href="https://www.facebook.com/rmznaktas1306" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> </div></li>
+        <li><div class="li-background d-flex justify-content-center align-items-center"><a class="ahref" href="https://www.linkedin.com/in/ramazanaktasoglu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></div></li>
+        <li><div class="li-background d-flex justify-content-center align-items-center"><a class="ahref" href="https://api.whatsapp.com/send?phone=05423761306" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></li>
     </ul>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
