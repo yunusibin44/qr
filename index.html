@@ -1,115 +1,1326 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Çağlar Tuncu</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Mersin Elektrikçi | 7/24 Acil Elektrik Hizmeti - Güler Elektrik</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  </head>
+  <!-- SEO Meta -->
+  <meta name="description" content="Mersin elektrikçi hizmeti. 7/24 acil elektrik arıza, sigorta, kaçak akım, tesisat tamiri, avize montajı. Hızlı servis için hemen arayın.">
+  <meta name="keywords" content="mersin elektrikçi, mersin acil elektrikçi, elektrik arıza mersin, elektrik ustası mersin, güler elektrik">
+  <meta name="author" content="Güler Elektrik">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mersin Elektrikçi | 7/24 Acil Elektrik Hizmeti">
+  <meta property="og:description" content="Mersin'de 7/24 acil elektrikçi. Elektrik arıza, sigorta, kaçak akım, tesisat tamiri. Hemen arayın.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ornekdomain.com">
+  <meta property="og:image" content="https://images.pexels.com/photos/4254168/pexels-photo-4254168.jpeg">
+
+  <!-- Favicon (isteğe bağlı) -->
+  <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/2965/2965281.png">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <!-- Custom CSS -->
   <style>
-/* Temel sayfa stili */
-/* Temel sayfa stili */
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    padding: 0;
-    text-align: center; /* Tüm içeriği yatayda ortala */
-}
-/* İletişim listesi stilini özelleştir */
-.contact-list {
-    list-style-type: none;
-    padding: 0;
-}
-.contact-list li {
-    margin-bottom: 20px; /* İletişim bilgileri arasındaki boşluğu artırın */
-    text-align: left; /* İletişim bilgilerini sola hizala */
-}
-/* Logo ve yazıları birleştirip ortala */
-.contact-list a {
-    text-decoration: none; /* Bağlantı altı çizgilerini kaldırın */
-    display: flex; /* İçeriği yatayda hizalayabilmek için flex kullanın */
-    align-items: center; /* İçeriği dikeyde ortala */
-    color: white;
-}
+    :root {
+      --primary: #ffb300;
+      --dark: #111827;
+      --accent: #22c55e;
+    }
 
-.contact-list a i {
-    font-size: 30px; /* İkon boyutunu artırın */
-    margin-right: 10px; /* İkonların metin ile arasındaki boşluğu ayarlayın */
-}
-/* İconları renklendirin */
-.contact-list a i.fab.fa-instagram {
-    color: #bc2a8d; /* Instagram ikon rengi */
-}
-.contact-list a i.fab.fa-facebook {
-    color: #3b5998; /* Facebook ikon rengi */
-}
-.contact-list a i.fab.fa-linkedin {
-    color: #0077b5; /* LinkedIn ikon rengi */
-}
-.contact-list a i.fab.fa-whatsapp {
-    color: #25d366; /* WhatsApp ikon rengi */
-}
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #050816;
+      color: #e5e7eb;
+      scroll-behavior: smooth;
+    }
 
-.contact{
-background-image: url(./fd.jpeg);
-    height: 100vh;
-    padding: 10px 20px;
-    border-radius: 10px;
-}
+    a {
+      text-decoration: none;
+    }
 
-html {
-    background-color: #ffffff;
-}
+    /* Üst İletişim Barı */
+    .top-bar {
+      background: linear-gradient(90deg, #fbbf24, #f97316);
+      color: #111827;
+      font-size: 0.9rem;
+      padding: 0.35rem 0;
+    }
 
-.li-background {
-    background: rgb(73,235,227);
-background: linear-gradient(90deg, rgb(17, 70, 67) 36%, rgb(53, 58, 70) 73%);
-height: 60px !important;
-border-radius: 10px;
-}
+    .top-bar a {
+      color: #111827;
+      font-weight: 600;
+    }
 
-.contact{
-    background-color: #ffffff;
-}
+    /* Navbar */
+    .navbar-custom {
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
 
-.contact-title {
-    color: #ffffff;
-    font-weight: 600;
-    font-family:cursive;
-}
+    .navbar-brand span {
+      color: var(--primary);
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
 
-.contact-text {
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    line-height: 30px;
-    font-family: cursive;
-}
+    .nav-link {
+      color: #e5e7eb !important;
+      font-weight: 500;
+      position: relative;
+      padding-bottom: .25rem;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #fbbf24, #f97316);
+      transition: width .25s;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      color: #f9fafb;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top left, rgba(251, 191, 36, 0.25), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(56, 189, 248, 0.22), transparent 55%);
+      opacity: 0.9;
+      pointer-events: none;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url("https://images.pexels.com/photos/4254168/pexels-photo-4254168.jpeg");
+      background-size: cover;
+      background-position: center;
+      filter: brightness(0.25) blur(1px);
+      transform: scale(1.05);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.95));
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .35rem .75rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(251, 191, 36, 0.6);
+      font-size: .85rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 3.4vw + 1rem, 3.6rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      letter-spacing: .03em;
+    }
+
+    .hero-title span {
+      color: var(--primary);
+      text-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+    }
+
+    .hero-subtitle {
+      font-size: 1.05rem;
+      color: #d1d5db;
+      max-width: 540px;
+    }
+
+    .hero-cta {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .75rem;
+      align-items: center;
+    }
+
+    .btn-primary-soft {
+      background: linear-gradient(90deg, #fbbf24, #f97316);
+      border: none;
+      color: #111827;
+      font-weight: 700;
+      padding: .75rem 1.5rem;
+      border-radius: 999px;
+      box-shadow: 0 10px 30px rgba(251, 191, 36, .35);
+    }
+
+    .btn-outline-light-custom {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      color: #e5e7eb;
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .hero-stats {
+      margin-top: 1.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: .95rem;
+    }
+
+    .stat-pill {
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: .5rem .9rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid rgba(55, 65, 81, 0.9);
+    }
+
+    .stat-pill i {
+      color: var(--primary);
+    }
+
+    /* Hero Sağ Kart */
+    .hero-card {
+      position: relative;
+      border-radius: 1.5rem;
+      background: radial-gradient(circle at top left, rgba(251, 191, 36, 0.12), transparent 50%), #020617;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: 0 18px 45px rgba(15, 23, 42, 0.9);
+      overflow: hidden;
+    }
+
+    .hero-card-header {
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid rgba(31, 41, 55, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(90deg, rgba(15, 23, 42, 0.95), rgba(30, 64, 175, 0.9));
+    }
+
+    .hero-card-header span {
+      font-size: .9rem;
+      color: #e5e7eb;
+    }
+
+    .hero-status-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 999px;
+      background: #22c55e;
+      box-shadow: 0 0 10px rgba(34, 197, 94, .8);
+    }
+
+    .hero-card-body {
+      padding: 1.25rem;
+      font-size: .9rem;
+    }
+
+    .hero-contact-line {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: .85rem;
+    }
+
+    .hero-contact-line small {
+      color: #9ca3af;
+    }
+
+    .hero-contact-line strong {
+      color: #f9fafb;
+    }
+
+    .hero-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      font-size: .8rem;
+      padding: .3rem .65rem;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.6);
+      color: #bbf7d0;
+      margin-bottom: .65rem;
+    }
+
+    .hero-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .65rem;
+      margin-top: .75rem;
+    }
+
+    .mini-item {
+      font-size: .8rem;
+      padding: .45rem .5rem;
+      border-radius: .75rem;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      color: #e5e7eb;
+    }
+
+    .mini-item i {
+      color: var(--primary);
+      font-size: .85rem;
+    }
+
+    /* Genel Bölümler */
+    section {
+      padding: 4.5rem 0;
+      position: relative;
+    }
+
+    .section-title {
+      font-weight: 800;
+      font-size: 2rem;
+      margin-bottom: .5rem;
+    }
+
+    .section-title span {
+      color: var(--primary);
+    }
+
+    .section-subtitle {
+      color: #9ca3af;
+      max-width: 520px;
+    }
+
+    /* Hizmet Kartları */
+    .service-card {
+      background: radial-gradient(circle at top, rgba(251, 191, 36, 0.12), #020617);
+      border-radius: 1.25rem;
+      padding: 1.4rem 1.3rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+
+    .service-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(249, 115, 22, 0.6);
+      margin-bottom: .75rem;
+    }
+
+    .service-icon i {
+      color: #f97316;
+    }
+
+    .service-card h5 {
+      font-size: 1.05rem;
+      margin-bottom: .4rem;
+    }
+
+    .service-pill {
+      display: inline-flex;
+      gap: .35rem;
+      font-size: .75rem;
+      color: #9ca3af;
+      margin-top: .4rem;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.75);
+      border-color: rgba(251, 191, 36, 0.8);
+    }
+
+    /* Neden Biz */
+    .reason-item {
+      display: flex;
+      gap: .9rem;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .reason-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.7);
+    }
+
+    .reason-icon i {
+      color: var(--primary);
+    }
+
+    /* Yorumlar */
+    .review-card {
+      border-radius: 1.25rem;
+      padding: 1.2rem 1.3rem;
+      background: #020617;
+      border: 1px solid rgba(55, 65, 81, 0.85);
+      height: 100%;
+    }
+
+    .review-stars {
+      color: #facc15;
+      margin-bottom: .35rem;
+    }
+
+    .review-name {
+      font-weight: 600;
+    }
+
+    .review-badge {
+      font-size: .75rem;
+      color: #a3e635;
+    }
+
+    /* SSS */
+    .accordion-button {
+      background-color: #020617;
+      color: #e5e7eb;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #111827;
+      color: #facc15;
+    }
+
+    .accordion-item {
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background-color: #020617;
+      color: #e5e7eb;
+    }
+
+    .accordion-body {
+      color: #d1d5db;
+    }
+
+    /* İletişim */
+    .contact-card {
+      background: #020617;
+      border-radius: 1.25rem;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      padding: 1.5rem;
+      height: 100%;
+    }
+
+    .form-control,
+    .form-select {
+      background-color: #020617;
+      border: 1px solid rgba(75, 85, 99, 0.9);
+      color: #e5e7eb;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      background-color: #020617;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(251, 191, 36, 0.3);
+      color: #f9fafb;
+    }
+
+    .map-wrapper {
+      border-radius: 1.25rem;
+      overflow: hidden;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      min-height: 280px;
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #020617;
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 1.5rem 0;
+      font-size: .9rem;
+      color: #9ca3af;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background-color: #22c55e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      z-index: 999;
+      cursor: pointer;
+      transition: transform .2s ease;
+    }
+
+    .whatsapp-float i {
+      color: white;
+      font-size: 1.6rem;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-2px) scale(1.03);
+    }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+
+    .reveal.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 991.98px) {
+      .hero {
+        padding-top: 1.5rem;
+      }
+
+      .hero-card {
+        margin-top: 2rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .hero-title {
+        font-size: 2.15rem;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+      }
+
+      .hero-mini-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
-  <body>
-    <div class="container pb-4 contact">
-    <h1 class="text-center pt-4 contact-title">Iletisim Bilgileri</h1>
-    <p class="text-center mt-3 contact-text">Benimle asagıdaki sosyal medya hesaplarından iletisime geçebilirsiniz:
-    <br><h5 class="contact-text">Çaglar Tuncu</h4>
-    </p>
-    <div>
-        <img style="width: 130px; height: 130px; margin-bottom: 30px; border-radius: 10px;" src="sad.jpeg" alt="">
+
+  <!-- Schema.org JSON-LD (Electrician LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Electrician",
+    "name": "Güler Elektrik",
+    "image": "https://images.pexels.com/photos/4254168/pexels-photo-4254168.jpeg",
+    "url": "https://www.ornekdomain.com",
+    "telephone": "+90-530-000-00-00",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Örnek Mah. Elektrikçi Sok. No:10",
+      "addressLocality": "Mersin",
+      "addressRegion": "Mersin",
+      "postalCode": "33000",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "36.8000",
+      "longitude": "34.6333"
+    },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    }],
+    "areaServed": {
+      "@type": "City",
+      "name": "Mersin"
+    },
+    "priceRange": "$$"
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Üst İletişim Barı -->
+  <div class="top-bar">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <div class="d-flex align-items-center gap-3">
+        <span><i class="fa-solid fa-phone-flip me-1"></i> <strong>0 (553) 056 33 49</strong></span>
+        <span class="d-none d-md-inline"><i class="fa-solid fa-location-dot me-1"></i> Mersin ve çevresi - 7/24 Hizmet</span>
+      </div>
+      <div class="d-flex align-items-center gap-3">
+        <a href="https://wa.me/905530563349?text=Merhaba%2C%20acil%20elektrik%20hizmeti%20ihtiyacim%20var." target="_blank">
+          <i class="fa-brands fa-whatsapp me-1"></i> WhatsApp ile Yaz
+        </a>
+      </div>
     </div>
+  </div>
 
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <i class="fa-solid fa-bolt-lightning text-warning"></i>
+        <span>GÜLER ELEKTRİK</span>
+      </a>
+      <button class="navbar-toggler text-light border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#hero">Anasayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Hizmetler</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Hakkımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Yorumlar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">SSS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">İletişim</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    <ul class="contact-list">
-      <li>
-            <div class="li-background d-flex justify-content-center align-items-center">
-            <a class="ahref" href="https://www.instagram.com/caglartuncu/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+  <!-- HERO -->
+  <header id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-7 reveal">
+          <div class="hero-badge">
+            <i class="fa-solid fa-circle-check text-warning"></i>
+            Mersin'de <strong>7/24 Acil Elektrikçi</strong>
+          </div>
+          <h1 class="hero-title">
+            <span>Mersin Elektrikçi</span> aramayı bırak, usta ayağına gelsin.
+          </h1>
+          <p class="hero-subtitle">
+            Sigorta atması, kaçak akım, tesisat arızası, avize montajı, aydınlatma ve daha fazlası.
+            <strong>Güler Elektrik</strong> olarak Mersin ve çevresinde aynı gün, hatta çoğu zaman aynı saatte yanındayız.
+          </p>
+          <div class="hero-cta">
+            <a href="tel:+905530563349" class="btn btn-primary-soft">
+              <i class="fa-solid fa-phone-volume me-2"></i> Hemen Ara: 0 (553) 056 33 49
+            </a>
+            <a href="#services" class="btn btn-outline-light-custom">
+              <i class="fa-solid fa-plug-circle-bolt me-2"></i> Hizmetlerimizi Gör
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat-pill">
+              <i class="fa-solid fa-star"></i>
+              <span><strong>4.9 / 5</strong> Google yorum ortalaması</span>
+            </div>
+            <div class="stat-pill">
+              <i class="fa-solid fa-clock-rotate-left"></i>
+              <span><strong>30 dk ortalama</strong> adrese varış süresi</span>
+            </div>
+            <div class="stat-pill">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span><strong>Garantili</strong> işçilik ve faturalı hizmet</span>
+            </div>
+          </div>
         </div>
-        </li>
-        <li><div class="li-background d-flex justify-content-center align-items-center"><a class="ahref" href="https://www.facebook.com/caglar.tuncu.5" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> </div></li>
-        <li><div class="li-background d-flex justify-content-center align-items-center"><a class="ahref" href="https://www.facebook.com/caglar.tuncu.5" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></div></li>
-        <li><div class="li-background d-flex justify-content-center align-items-center"><a class="ahref" href="https://api.whatsapp.com/send?phone=05304057546" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></div></li>
-        <li><div class="li-background d-flex justify-content-center align-items-center"><a class="ahref" href="iban.html"><i class="fas fa-money-check-alt"></i>İban Bilgileri</a></div></li>
-      </ul>
-</div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
+
+        <div class="col-lg-5 reveal">
+          <div class="hero-card">
+            <div class="hero-card-header">
+              <span><i class="fa-solid fa-headset me-2 text-warning"></i> Acil Elektrik Destek Hattı</span>
+              <div class="d-flex align-items-center gap-2">
+                <span class="text-xs text-light" style="font-size: .8rem;">Müsait</span>
+                <div class="hero-status-dot"></div>
+              </div>
+            </div>
+            <div class="hero-card-body">
+              <div class="hero-card-badge">
+                <i class="fa-solid fa-bolt-lightning"></i> 7/24 Hizmet - Mersin Geneli
+              </div>
+
+              <div class="hero-contact-line">
+                <div>
+                  <small>Telefon</small><br>
+                  <strong>0 (553) 056 33 49</strong>
+                </div>
+                <a href="tel:+905530563349" class="btn btn-sm btn-primary-soft">
+                  <i class="fa-solid fa-phone me-1"></i> Ara
+                </a>
+              </div>
+
+              <div class="hero-contact-line">
+                <div>
+                  <small>WhatsApp</small><br>
+                  <strong>Hızlı teklif & konum gönder</strong>
+                </div>
+                <a href="https://wa.me/905530563349?text=Merhaba%2C%20elektrik%20arizam%20var.%20Adresim%3A" target="_blank" class="btn btn-sm btn-outline-light-custom">
+                  <i class="fa-brands fa-whatsapp me-1 text-success"></i> Yaz
+                </a>
+              </div>
+
+              <small class="text-secondary d-block mb-2">
+                Kısa formu doldurun, en yakın ekibimiz sizi 5-10 dakika içinde arasın.
+              </small>
+
+              <form id="heroQuickForm" class="mb-2">
+                <div class="row g-2">
+                  <div class="col-12">
+                    <input type="text" class="form-control form-control-sm" id="qName" placeholder="Adınız">
+                  </div>
+                  <div class="col-12">
+                    <input type="text" class="form-control form-control-sm" id="qDistrict" placeholder="Semt / Mahalle (Örn: Yenişehir)">
+                  </div>
+                  <div class="col-12">
+                    <select class="form-select form-select-sm" id="qService">
+                      <option value="">Hizmet türü</option>
+                      <option>Sigorta atıyor</option>
+                      <option>Elektrik tamamen gitti</option>
+                      <option>Kaçak akım rölesi sorunu</option>
+                      <option>Avize montajı</option>
+                      <option>Priz / anahtar arızası</option>
+                      <option>Diğer</option>
+                    </select>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn w-100 btn-primary-soft btn-sm">
+                      <i class="fa-solid fa-paper-plane me-1"></i> WhatsApp'tan Ön Bilgi Gönder
+                    </button>
+                  </div>
+                </div>
+              </form>
+
+              <div class="hero-mini-grid">
+                <div class="mini-item">
+                  <i class="fa-solid fa-shield-heart"></i>
+                  <span>Sigortalı & faturalı hizmet</span>
+                </div>
+                <div class="mini-item">
+                  <i class="fa-solid fa-truck-bolt"></i>
+                  <span>Mersin geneli mobil ekip</span>
+                </div>
+                <div class="mini-item">
+                  <i class="fa-solid fa-house-circle-check"></i>
+                  <span>Ev & işyeri elektrik tesisatı</span>
+                </div>
+                <div class="mini-item">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span>Acil durumlarda öncelikli çıkış</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- HİZMETLER -->
+  <section id="services">
+    <div class="container">
+      <div class="row mb-4 align-items-end">
+        <div class="col-lg-7 reveal">
+          <h2 class="section-title">Mersin <span>Elektrikçi Hizmetlerimiz</span></h2>
+          <p class="section-subtitle">
+            Ev, ofis, dükkan ve iş yerleriniz için tüm elektrik arıza ve tesisat çözümlerini tek noktadan sunuyoruz.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-bolt"></i>
+            </div>
+            <h5>Mersin Acil Elektrik Arıza</h5>
+            <p class="mb-1">
+              Ani elektrik kesintisi, sigorta atması, kablo yanması, koku veya kıvılcım durumlarında
+              hızlıca adrese gelip sorunu güvenle çözüyoruz.
+            </p>
+            <div class="service-pill">
+              <i class="fa-solid fa-clock"></i> 7/24 • Ortalama 30 dk'da adreste
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h5>Kaçak Akım Rölesi & Sigorta</h5>
+            <p class="mb-1">
+              Sürekli atan kaçak akım röleleri, eskiyen sigortalar ve risk oluşturan panolar için
+              profesyonel çözüm ve yenileme hizmeti sunuyoruz.
+            </p>
+            <div class="service-pill">
+              <i class="fa-solid fa-house-crack"></i> Can & mal güvenliği odaklı
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+            <h5>Avize & Aydınlatma Montajı</h5>
+            <p class="mb-1">
+              Avize, spot aydınlatma, LED şerit, sensörlü lamba ve dekoratif ışık sistemlerinin montaj
+              ve bağlantılarını temiz işçilikle yapıyoruz.
+            </p>
+            <div class="service-pill">
+              <i class="fa-solid fa-screwdriver-wrench"></i> Tertemiz montaj, iz bırakmadan
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-plug-circle-exclamation"></i>
+            </div>
+            <h5>Priz & Anahtar Arızaları</h5>
+            <p class="mb-1">
+              Isınan prizler, çalışmayan anahtarlar, gevşek bağlantılar ve eski altyapı problemleri
+              için güvenli ve kalıcı çözümler üretiyoruz.
+            </p>
+            <div class="service-pill">
+              <i class="fa-solid fa-fire-extinguisher"></i> Yangın riskini düşüren çözümler
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-building-user"></i>
+            </div>
+            <h5>Tesisat Yenileme & Proje</h5>
+            <p class="mb-1">
+              Eski binalar, tadilat sonrası tesisat değişimi, ofis ve işyeri elektrik projelendirme işleri
+              için uzman kadromuzla hizmet veriyoruz.
+            </p>
+            <div class="service-pill">
+              <i class="fa-solid fa-file-invoice"></i> Keşif & fiyatlandırma hizmeti
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 reveal">
+          <div class="service-card">
+            <div class="service-icon">
+              <i class="fa-solid fa-solar-panel"></i>
+            </div>
+            <h5>Koruma & Tasarruf Çözümleri</h5>
+            <p class="mb-1">
+              Parafudr, gerilim koruma rölesi, enerji tasarruflu aydınlatma ve dengeli yük dağılımı ile
+              daha güvenli ve ekonomik bir sistem kuruyoruz.
+            </p>
+            <div class="service-pill">
+              <i class="fa-solid fa-leaf"></i> Enerji tasarrufu & koruma odaklı
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAKKIMIZDA & NEDEN BİZ -->
+  <section id="about">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6 reveal">
+          <h2 class="section-title">Neden <span>Güler Elektrik?</span></h2>
+          <p class="section-subtitle mb-3">
+            Mersin’de yıllardır hem bireysel hem kurumsal müşterilere elektrik hizmeti veriyoruz.
+            Amacımız, arıza çözerken evinizi ve işinizi de güvene almak.
+          </p>
+
+          <div class="reason-item">
+            <div class="reason-icon">
+              <i class="fa-solid fa-id-card-clip"></i>
+            </div>
+            <div>
+              <h6>Ustalık belgeli ve deneyimli ekip</h6>
+              <p class="mb-0 text-secondary">
+                Alanında tecrübeli, gerekli sertifika ve belgeleri olan ustalarla çalışıyoruz.
+              </p>
+            </div>
+          </div>
+
+          <div class="reason-item">
+            <div class="reason-icon">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div>
+              <h6>Faturalı ve garantili hizmet</h6>
+              <p class="mb-0 text-secondary">
+                Yaptığımız işin arkasındayız. Parça ve işçilik garantisiyle çalışıyoruz.
+              </p>
+            </div>
+          </div>
+
+          <div class="reason-item">
+            <div class="reason-icon">
+              <i class="fa-solid fa-route"></i>
+            </div>
+            <div>
+              <h6>Mersin geneli hızlı ulaşım</h6>
+              <p class="mb-0 text-secondary">
+                Yenişehir, Mezitli, Toroslar, Akdeniz ve çevre ilçelere kısa sürede ulaşıyoruz.
+              </p>
+            </div>
+          </div>
+
+          <div class="reason-item">
+            <div class="reason-icon">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <div>
+              <h6>Güvenli ve temiz işçilik</h6>
+              <p class="mb-0 text-secondary">
+                İş bitiminde etrafı toplar, kablo karmaşası bırakmayız. Eve ve iş yerine saygılıyız.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 reveal">
+          <div class="contact-card">
+            <h5 class="mb-3"><i class="fa-solid fa-screwdriver-wrench me-2 text-warning"></i> Acil durumlar için hızlı form</h5>
+            <p class="text-secondary mb-3">
+              Aşağıdaki formu doldurun, ekibimiz en kısa sürede size dönüş yapsın.
+            </p>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label">Ad Soyad</label>
+                  <input type="text" class="form-control" id="cName" placeholder="Adınız Soyadınız">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Telefon</label>
+                  <input type="tel" class="form-control" id="cPhone" placeholder="0 (5xx) xxx xx xx">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Semt / Mahalle</label>
+                  <input type="text" class="form-control" id="cDistrict" placeholder="Örn: Mezitli / Yenişehir">
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label">Hizmet Türü</label>
+                  <select class="form-select" id="cService">
+                    <option value="">Seçiniz</option>
+                    <option>Elektrik tamamen gitti</option>
+                    <option>Sigorta sürekli atıyor</option>
+                    <option>Kaçak akım sorunu</option>
+                    <option>Avize / aydınlatma montajı</option>
+                    <option>Priz / anahtar arızası</option>
+                    <option>Tesisat yenileme</option>
+                    <option>Diğer</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Kısa Açıklama</label>
+                  <textarea class="form-control" id="cMessage" rows="3" placeholder="Sorununuzu kısaca anlatın..."></textarea>
+                </div>
+                <div class="col-12 d-flex justify-content-between flex-wrap gap-2">
+                  <button type="submit" class="btn btn-primary-soft">
+                    <i class="fa-brands fa-whatsapp me-1"></i> WhatsApp ile Gönder
+                  </button>
+                  <small class="text-secondary">
+                    Form, bilgilerinizle birlikte direkt WhatsApp sohbeti açar. Kayıt altına alınmaz.
+                  </small>
+                </div>
+              </div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- YORUMLAR -->
+  <section id="reviews">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-7 reveal">
+          <h2 class="section-title">Müşteri <span>Yorumlarımız</span></h2>
+          <p class="section-subtitle">
+            Google ve WhatsApp üzerinden aldığımız gerçek geri bildirimlerden bazıları.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4 reveal">
+          <div class="review-card h-100">
+            <div class="review-stars mb-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="mb-2">
+              Akşam 11 gibi tüm elektrik gitti, 20-25 dakikada gelip sorunu çözdüler.
+              Hem hızlı hem de açıklayıcı bir şekilde anlattılar. Teşekkürler.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="review-name">Ayşe K.</div>
+                <div class="review-badge">Yenişehir / Mersin</div>
+              </div>
+              <i class="fa-solid fa-user-shield text-secondary"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="review-card h-100">
+            <div class="review-stars mb-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="mb-2">
+              Dükkanımızın panosu komple yenilendi, kablo karmaşası bitti. İşçilik tertemiz,
+              fiyat da verilen teklifin aynısıydı, ekstra bir sürpriz olmadı.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="review-name">Mehmet B.</div>
+                <div class="review-badge">İşyeri - Mezitli</div>
+              </div>
+              <i class="fa-solid fa-briefcase text-secondary"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 reveal">
+          <div class="review-card h-100">
+            <div class="review-stars mb-1">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="mb-2">
+              Tüm evin avizelerini ve spotlarını değiştirdik. Hem dekoratif öneriler verdiler,
+              hem de çok temiz çalıştılar. Gönül rahatlığıyla tavsiye ederim.
+            </p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <div class="review-name">Elif D.</div>
+                <div class="review-badge">Ev - Toroslar</div>
+              </div>
+              <i class="fa-solid fa-house-chimney text-secondary"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SSS -->
+  <section id="faq">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-7 reveal">
+          <h2 class="section-title">Sık Sorulan <span>Sorular</span></h2>
+          <p class="section-subtitle">
+            Mersin’de elektrikçi hizmeti alırken akla gelen sorulara kısaca cevap verdik.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 reveal">
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1c">
+                  Ne kadar sürede geliyorsunuz?
+                </button>
+              </h2>
+              <div id="faq1c" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Mersin merkez ilçelerine (Yenişehir, Mezitli, Akdeniz, Toroslar) genellikle
+                  <strong>30-45 dakika</strong> içinde ulaşıyoruz. Yoğunluk ve konuma göre bu süre değişebilir,
+                  aradığınızda size net süreyi iletiyoruz.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2c">
+                  7/24 gerçekten açık mısınız?
+                </button>
+              </h2>
+              <div id="faq2c" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Evet, <strong>haftanın 7 günü, 24 saat</strong> acil elektrikçi hizmeti veriyoruz. Gece, bayram,
+                  hafta sonu fark etmeksizin bize ulaşabilirsiniz.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3c">
+                  Ücretleriniz nasıl belirleniyor?
+                </button>
+              </h2>
+              <div id="faq3c" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Arızanın türü, kullanılan malzeme, mesafe ve çalışma süresine göre fiyat belirleniyor.
+                  Telefonda ön bilgi alıp yaklaşık bir fiyat aralığı sunuyor, yerinde netleştiriyoruz.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4c">
+                  Ödeme yöntemleriniz neler?
+                </button>
+              </h2>
+              <div id="faq4c" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Nakit, banka havalesi ve isteğe bağlı pos cihazı ile kredi kartı ödemesi kabul ediyoruz. İşyeri
+                  ve kurumsal müşteriler için faturalı çalışma imkanı da mevcut.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="faq5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5c">
+                  Yaptığınız işe garanti veriyor musunuz?
+                </button>
+              </h2>
+              <div id="faq5c" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Evet, yaptığımız işçilik ve kullanılan malzemelere durumuna göre <strong>garanti</strong> veriyoruz.
+                  Detayları iş öncesi ustamız size sözlü olarak da aktarıyor.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-4 mt-lg-0 reveal">
+          <div class="contact-card">
+            <h5 class="mb-2"><i class="fa-solid fa-circle-question me-2 text-warning"></i> Aklınıza takılan başka bir şey mi var?</h5>
+            <p class="text-secondary mb-3">
+              WhatsApp üzerinden <strong>fotoğraf veya video</strong> göndererek arızayı gösterebilir,
+              ortalama fiyat ve çözüm süresi hakkında önceden bilgi alabilirsiniz.
+            </p>
+            <a href="https://wa.me/905530563349?text=Merhaba%2C%20elektrik%20arizamla%20ilgili%20soru%20sormak%20istiyorum." target="_blank" class="btn btn-primary-soft w-100 mb-2">
+              <i class="fa-brands fa-whatsapp me-2"></i> WhatsApp'tan Sor
+            </a>
+            <small class="text-secondary">Cevap veremezsek muhtemelen sahadayız; en kısa sürede dönüş yapıyoruz.</small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM -->
+  <section id="contact">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-lg-7 reveal">
+          <h2 class="section-title">Mersin <span>Elektrikçi İletişim</span></h2>
+          <p class="section-subtitle">
+            Telefon, WhatsApp veya konum paylaşarak bize kolayca ulaşabilirsiniz.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-5 reveal">
+          <div class="contact-card h-100">
+            <h5 class="mb-3"><i class="fa-solid fa-phone-volume me-2 text-warning"></i> İletişim Bilgileri</h5>
+            <ul class="list-unstyled mb-3">
+              <li class="mb-2">
+                <i class="fa-solid fa-phone-flip me-2 text-warning"></i>
+                <strong>Telefon:</strong> 0 (553) 056 33 49
+              </li>
+              <li class="mb-2">
+                <i class="fa-brands fa-whatsapp me-2 text-success"></i>
+                <strong>WhatsApp:</strong> 0 (553) 056 33 49
+              </li>
+              <li class="mb-2">
+                <i class="fa-solid fa-location-dot me-2 text-warning"></i>
+                <strong>Adres:</strong> Örnek Mah. Elektrikçi Sok. No:10, Mersin
+              </li>
+              <li class="mb-2">
+                <i class="fa-solid fa-clock me-2 text-warning"></i>
+                <strong>Çalışma Saatleri:</strong> 7/24 Açık
+              </li>
+            </ul>
+            <a href="https://www.google.com/maps" target="_blank" class="btn btn-outline-light-custom w-100 mb-2">
+              <i class="fa-solid fa-map-location-dot me-2"></i> Google Haritalar'da Aç
+            </a>
+            <a href="tel:+905530563349" class="btn btn-primary-soft w-100">
+              <i class="fa-solid fa-phone me-2"></i> Hemen Ara
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-7 reveal">
+          <div class="map-wrapper">
+            <!-- Buraya kendi Google Maps embed kodunu koyabilirsin -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d781612.2566433971!2d33.8!3d36.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d88b1b1b1b1b1b%3A0x0000000000000000!2sMersin!5e0!3m2!1str!2str!4v0000000000000"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container d-flex justify-content-between flex-wrap gap-2">
+      <div>
+        © <span id="footerYear"></span> Güler Elektrik - Mersin Elektrikçi. Tüm hakları saklıdır.
+      </div>
+      <div>
+        <small>Web tasarım &amp; geliştirme: <strong>Senin Adın</strong></small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="whatsapp-float" href="https://wa.me/905530563349?text=Merhaba%2C%20elektrik%20hizmeti%20almak%20istiyorum." target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- JS -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    $(function () {
+      // Yıl otomatik
+      $('#footerYear').text(new Date().getFullYear());
+
+      // Smooth scroll
+      $('a.nav-link[href^="#"], a.btn[href^="#"]').on('click', function (e) {
+        var target = $(this.getAttribute('href'));
+        if (target.length) {
+          e.preventDefault();
+          $('html, body').stop().animate({
+            scrollTop: target.offset().top - 80
+          }, 600);
+        }
+      });
+
+      // Scroll reveal
+      function revealOnScroll() {
+        $('.reveal').each(function () {
+          var elementTop = $(this).offset().top;
+          var viewportBottom = $(window).scrollTop() + $(window).height() * 0.9;
+          if (elementTop < viewportBottom) {
+            $(this).addClass('in-view');
+          }
+        });
+      }
+      revealOnScroll();
+      $(window).on('scroll', revealOnScroll);
+
+      // Hero quick form -> WhatsApp
+      $('#heroQuickForm').on('submit', function (e) {
+        e.preventDefault();
+        var name = $('#qName').val() || "İsim belirtilmedi";
+        var district = $('#qDistrict').val() || "Semt belirtilmedi";
+        var service = $('#qService').val() || "Hizmet türü belirtilmedi";
+
+        var text = "Merhaba, acil elektrik hizmeti için bilgi almak istiyorum.%0A%0A"
+          + "*Adım:* " + name + "%0A"
+          + "*Semt:* " + district + "%0A"
+          + "*Hizmet:* " + service + "%0A%0A"
+          + "Müsait olduğunuzda dönüş yapabilir misiniz?";
+
+        var phone = "905530563349"; // KENDİ WHATSAPP NUMARANI YAZ
+        window.open("https://wa.me/" + phone + "?text=" + text, "_blank");
+      });
+
+      // Detaylı iletişim formu -> WhatsApp
+      $('#contactForm').on('submit', function (e) {
+        e.preventDefault();
+        var name = $('#cName').val() || "İsim belirtilmedi";
+        var phone = $('#cPhone').val() || "Telefon belirtilmedi";
+        var district = $('#cDistrict').val() || "Semt belirtilmedi";
+        var service = $('#cService').val() || "Hizmet türü belirtilmedi";
+        var msg = $('#cMessage').val() || "-";
+
+        var text = "Merhaba, elektrik hizmeti için iletişim formu doldurdum.%0A%0A"
+          + "*Ad Soyad:* " + name + "%0A"
+          + "*Telefon:* " + phone + "%0A"
+          + "*Semt:* " + district + "%0A"
+          + "*Hizmet Türü:* " + service + "%0A"
+          + "*Açıklama:* " + msg + "%0A%0A"
+          + "Müsait olduğunuzda dönüş yapabilir misiniz?";
+
+        var waPhone = "905530563349"; // KENDİ WHATSAPP NUMARANI YAZ
+        window.open("https://wa.me/" + waPhone + "?text=" + text, "_blank");
+      });
+    });
+  </script>
+</body>
 </html>
